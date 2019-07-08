@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<script src="js/jquery/2.0.0/jquery.min.js"></script>
+<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+<style type="text/css">
+	div.container div.row div{
+		margin: 5px 0px;
+	}
+	div.container div.row div{
+		background-color: lightgray;
+		border: 1px solid gray;
+		text-align: center;
+	}
+</style>
+	
+	<hr /><h2>下面是其它部分，包括--关闭按钮-下拉菜单按钮-左浮动-有浮动-2种显示-2种隐藏-</h2>
+	<hr /><h3>关闭按钮-一般用于切换效果--class="close" aria-hidden="true"</h3>
+
+	<button type="button" class="close" aria-hidden="true">&times;</button>
+	<hr /><h3>下拉菜单的按钮class="caret"</h3>
+	<span class="caret"></span>
+	<hr /><h3>左浮动，相当于css中的float:left</h3>
+	<div class="pull-left">文字浮动到左边</div>
+	<hr /><h3>右浮动，相当于css中的float:right</h3>
+	<div class="pull-right">文字浮动到右边</div>
+	<hr /><h3>显示-强行显示--class="show"</h3>
+	<div class="show">显示</div>
+	<hr /><h3>强行隐藏，会把该原始的位置也让出来</h3>
+	<div class="show">显示1</div>
+	<div class="hidden">隐藏</div>
+	<div class="show">显示3</div>
+	<hr /><h3>强行隐藏，该元素的位置会保留</h3>
+	<div class="show">显示1</div>
+	<div class="invisible">隐藏</div>
+	<div class="show">显示3</div>
+	
+	<hr class="col-sm-1" />
+	<h2 style="color: #449D44;">下面是栅格系统</h2>
+	<h4 style="color: #449D44;">
+		运用Bootstarap的栅格系统，可以做出像table那样定义多少行，多少列的效果，但是又比table灵活
+		运用Bootstarap的栅格系统，首先需要准备一个class=container的div，紧接着需要一个class=row的div表示行
+		再接着挨着的div，就是列了
+		Bootstarap的栅格系统会默认把一行，分成12列
+	</h4>
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">一共12列</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+				<div class="col-xs-1">1列</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4 invisible">占4列</div>
+				<div class="col-xs-4">占4列</div>
+				<div class="col-xs-4 hidden">占4列</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">二分之一</div>
+				<div class="col-xs-6">二分之一</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-4">三分之一</div>
+				<div class="col-xs-4">三分之一</div>
+				<div class="col-xs-4">三分之一</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-3">四分之一</div>
+				<div class="col-xs-3">四分之一</div>
+				<div class="col-xs-3">四分之一</div>
+				<div class="col-xs-3">四分之一</div>
+			</div>
+		</div>
+		<hr/><h2 style="color: #398439;">自动换行</h2>
+		<h4 style="color: #449D44;">
+			当同一行的栅格总数超过12的时候，就会自动换行
+		</h4>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-6">xs-6块</div>
+				<div class="col-xs-6">xs-6块</div>
+			</div>
+		</div>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-8">xs-8块</div>
+				<div class="col-xs-6">xs-8块</div>
+			</div>
+		</div>							 
+									 
+									 
+									 
+<script>
+	/* 加入以下代码禁止用户缩放 */
+	window.onload=function () {         
+ document.addEventListener('touchstart',function (event) {  
+           if(event.touches.length>1){  
+                event.preventDefault();  
+            }  
+        })  
+
+        var lastTouchEnd=0;
+        document.addEventListener('touchend',function (event) {
+            var now=(new Date()).getTime(); 
+            if(now-lastTouchEnd<=300){  
+                event.preventDefault();  
+            }  
+            lastTouchEnd=now;  
+       },false)  
+}
+</script>									 

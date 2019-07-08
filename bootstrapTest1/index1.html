@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<script src="js/jquery/2.0.0/jquery.min.js"></script>
+<link href="css/bootstrap/3.3.6/bootstrap.min.css" rel="stylesheet">
+<script src="/js/bootstrap/3.3.6/bootstrap.min.js"></script>
+<meta name="viewport" content="width=device-width, 
+                                     initial-scale=1.0, 
+                                     maximum-scale=1.0, 
+                                     user-scalable=no">
+<style type="text/css">
+	
+</style>
+<hr /><h2>下面是图片部分</h2>
+<hr />
+<img src="img/example.gif" />基本图片
+<hr /><h3>下面是基本图片--圆角--图片四个角变得圆滑--class="img-rounded"</h3>
+<img src="img/example.gif" class="img-rounded" >
+<hr /><h3>下面是基本图片--圆形--图片以圆形表示--class="img-circle"</h3>
+<img src="img/example.gif" class="img-circle" >
+<hr /><h3>下面是基本图片--缩略图--图片以缩略图的样式表示--class="img-thumbnail"</h3>
+<img src="img/example.gif" class="img-thumbnail" >
+<hr /><h2>下面是表单部分</h2>
+<hr />
+<h3>下面是表单的各种输入元素--对输入元素使用form-control 可以去除阴影，边框附带淡蓝色，输入状态更加柔和</h3>
+ <div class="col-lg-10">
+<input type="text" class="form-control" value="文本框" /> <br /><br />	
+</div>
+<input type="password" class="form-control" value="password" /> <br /><br />
+<textarea class="form-control">文本域</textarea> <br /><br />
+<select class="form-control">
+	<option>java</option>
+	<option>html</option>
+	<option>IOS</option>
+</select>
+<hr /> <h3>表单实例</h3>
+<form role="form">
+	<div class="form-group">
+		<label for="name">名称</label>
+		<input type="text" class="form-control" id="name" 
+			   placeholder="请输入账号">
+	</div>
+	<div class="form-group">
+		<label for="inputfile">文件输入</label>
+		<input type="file" id="inputfile">
+		<p class="help-block">这里是块级帮助文本的实例。</p>
+	</div>
+	<div class="checkbox">
+		<label>
+			<input type="checkbox"> 请打勾
+		</label>
+	</div>
+	<button type="submit" class="btn btn-primary">提交</button>
+</form>
+<br />
+<hr /><h2>下面是文本与背景部分--文本与背景都一样--背景是"bg-状态"--文字是"text-状态"</h2>
+<p class="bg-primary">强调背景</p>
+<p class="text-primary">强调文字</p>
+<p class="bg-success">成功背景</p>
+<p class="text-success">成功文字</p>
+<p class="bg-warning">警告背景</p>
+<p class="text-warning">警告文字</p>
+<p class="bg-info">信息背景</p>
+<p class="text-info">信息文字</p>
+<p class="bg-danger">危险背景</p>
+<p class="text-danger">危险文字</p>
+<div class="form-group has-success">
+		<label class="col-sm-2 control-label" for="inputSuccess">
+			输入成功
+		</label>
+		<div class="col-sm-10">
+			<input type="text" class="form-control" id="inputSuccess">
+		</div>
+
+<script>
+	/* 加入以下代码禁止用户缩放 */
+	window.onload=function () {         
+ document.addEventListener('touchstart',function (event) {  
+           if(event.touches.length>1){  
+                event.preventDefault();  
+            }  
+        })  
+
+        var lastTouchEnd=0;
+        document.addEventListener('touchend',function (event) {
+            var now=(new Date()).getTime(); 
+            if(now-lastTouchEnd<=300){  
+                event.preventDefault();  
+            }  
+            lastTouchEnd=now;  
+       },false)  
+}
+</script>
